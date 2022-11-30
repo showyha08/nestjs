@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get('/')
   @Render('index')
   root() {
     return {
@@ -19,7 +19,7 @@ export class AppController {
   send(@Body() form: any) {
     return {
       title: 'Nest form',
-      msg: JSON.stringify(form)
-    }
+      msg: JSON.stringify(form),
+    };
   }
 }

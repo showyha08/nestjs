@@ -11,25 +11,24 @@
       crossorigin="anonymous"
     />
     <title><%=title%></title>
+    <script src="index.js"></script>
   </head>
   <body>
     <h1 class="bg-info text-white p-2"><%=title%></h1>
     <div class="container py-2">
-      <h2 class="mb-3"><%=msg%></h2>
+      <h2 class="mb-3" id="msg"><%=msg%></h2>
       <div class="alert alert-info">
-        <form action="/" method="post">
-          <div class="mb-2">
-            <label for="">ID:</label>
-            <input type="text" class="form-control" name="id">
-          </div>
-          <div class="mb-2">
-            <label for="">passord:</label>
-            <input type="text" name="pass" class="form-control">
-          </div>
-          <div>
-            <input type="submit" value="送信" class="btn btn-info">
-          </div>
-        </form>
+        <div class="mb-2">
+          <label for="">ID:</label>
+          <input type="text" name="id" class="form-control" />
+        </div>
+        <div class="mb-2">
+          <label for="">passord:</label>
+          <input type="text" name="pass" class="form-control" />
+        </div>
+        <div>
+          <button class="btn btn-info" onclick="doAction()">送信</button>
+        </div>
       </div>
     </div>
   </body>
