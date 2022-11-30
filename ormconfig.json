@@ -1,0 +1,7 @@
+{
+  "type": "sqlite",
+  "database": "data/database.sqlite3",
+  "entites": ["dist/entities/**/*.entity.js"],
+  "migrations": ["dist/migrations/**/*.js"],
+  "migrationTableName": "mydata_migration"
+}
